@@ -1,4 +1,4 @@
-module github.com/fenriz07/Golang-Transbank-Oneclick-mall
+module github.com/fenriz07/oneclick-golang-example
 
 go 1.14
 
