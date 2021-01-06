@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Confirmando inscripción</title>
+  </head>
+  <body>
+    <h1>Datos de respuesta</h1>
+
+    <p> authorizationCode : {{.authorizationCode}}</p>
+    <p> cardNumber : {{.cardNumber}}</p>
+    <p> cardType : {{.cardType}}</p>
+    <p> responseCode : {{.responseCode}}</p>
+    <p style="color:red"> tbkUser : <input type="text" value="{{.tbkUser}}"></input></p> 
+    <strong> Guarda el tbkUser para poder cobrar, reversar y cancelar la inscripción en el futuro </strong>
+    
+</html>
