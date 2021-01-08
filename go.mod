@@ -3,7 +3,7 @@ module github.com/fenriz07/oneclick-golang-example
 go 1.14
 
 require (
-	github.com/fenriz07/Golang-Transbank-Oneclick-mall v0.0.0-20210105002253-a957081c0fd7
+	github.com/fenriz07/Golang-Transbank-Oneclick-mall v0.0.0-20210107013401-bc9ce3c66483
 	github.com/howeyc/fsnotify v0.9.0 // indirect
 	github.com/kataras/iris/v12 v12.1.8
 	github.com/mattn/go-colorable v0.1.8 // indirect

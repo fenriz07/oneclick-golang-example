@@ -1,0 +1,28 @@
+<!-- file: ./views/hello.html -->
+<html>
+  <head>
+    <title>Bienvenido al ejemplo OneClick</title>
+  </head>
+  <body>
+    <h1>Borrar inscripción</h1>
+
+    <p>Token del usuario generado despues de la inscripción exitosa</p>
+    <p>
+      Usuario ingresado en el formulario de inicialización de la inscripción
+    </p>
+
+    <form action="http://localhost:8080/inscription/delete" method="post">
+      <label for="user_token">Token del usuario</label>
+      <input type="text" name="user_token" id="user_token" />
+
+      <br />
+
+      <label for="username">Usuario</label>
+      <input type="text" name="username" id="username" />
+
+      <br />
+
+      <button type="submit">Borrar inscripción</button>
+    </form>
+  </body>
+</html>

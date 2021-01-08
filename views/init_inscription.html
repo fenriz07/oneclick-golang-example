@@ -1,0 +1,23 @@
+<!-- file: ./views/hello.html -->
+<html>
+  <head>
+    <title>Bienvenido al ejemplo OneClick</title>
+  </head>
+  <body>
+    <h1>Iniciar Inscripción</h1>
+
+    <form action="http://localhost:8080/inscription/create" method="post">
+    
+        <label for="username">Usuario</label>
+        <input type="text" name="username" id="username" required>
+        <p>Anota el usuario, se usara mas adelante para autorizar cobros</p>
+
+        <label for="email">Correo</label>
+        <input type="email" name="email" id="email" required>
+
+        <br>
+        <button type="submit"> Iniciar el proceso de inscripción</button>
+    
+    </form>
+  </body>
+</html>

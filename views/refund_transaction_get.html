@@ -1,0 +1,23 @@
+<!-- file: ./views/hello.html -->
+<html>
+  <head>
+    <title>Bienvenido al ejemplo OneClick</title>
+  </head>
+  <body>
+    <h1>Reversar o Anular</h1>
+
+    <form action="http://localhost:8080/transaction/refund" method="post">
+      <label for="order">Orden de compra</label>
+      <input type="text" name="order" id="order" />
+
+      <br />
+
+      <label for="amount">Monto</label>
+      <input type="number" name="amount" id="amount" />
+
+      <br />
+
+      <button type="submit">Reversar o Anular</button>
+    </form>
+  </body>
+</html>

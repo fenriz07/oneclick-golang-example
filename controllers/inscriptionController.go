@@ -5,14 +5,22 @@ import (
 	"github.com/kataras/iris/v12"
 )
 
+func InitInscription(ctx iris.Context) {
+	ctx.View("init_inscription.html")
+}
+
 /*CreateInscription controller for create inscription*/
 func CreateInscription(ctx iris.Context) {
 
-	response, err := inscription.CreateInscription("1212", "servio.za@gmail.com", "http://localhost:8080/inscription/confirm")
+	username := ctx.PostValue("username")
+	email := ctx.PostValue("email")
+
+	response, err := inscription.CreateInscription(username, email, "http://localhost:8080/inscription/confirm")
 
 	if err != nil {
 		ctx.ViewData("error", err)
 		ctx.View("error.html")
+		return
 	} else {
 		ctx.ViewData("token", response.Token)
 		ctx.ViewData("urloneclick", response.URLWebpay)
@@ -31,6 +39,7 @@ func ConfirmInscription(ctx iris.Context) {
 	if err != nil {
 		ctx.ViewData("error", err)
 		ctx.View("error.html")
+		return
 	} else {
 		ctx.ViewData("authorizationCode", response.AuthorizationCode)
 		ctx.ViewData("cardNumber", response.CardNumber)
@@ -41,4 +50,25 @@ func ConfirmInscription(ctx iris.Context) {
 		ctx.View("confirm_inscription.html")
 	}
 
+}
+
+func DeleteInscriptionGet(ctx iris.Context) {
+	ctx.View("delete_inscription_get.html")
+}
+
+func DeleteInscriptionPost(ctx iris.Context) {
+
+	username := ctx.PostValue("username")
+	userToken := ctx.PostValue("user_token")
+
+	status, err := inscription.DeleteInscription(userToken, username)
+
+	if err != nil {
+		ctx.ViewData("error", err)
+		ctx.View("error.html")
+		return
+	}
+
+	ctx.ViewData("status", status)
+	ctx.View("delete_inscription_post.html")
 }

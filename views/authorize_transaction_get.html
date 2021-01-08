@@ -1,0 +1,40 @@
+<!-- file: ./views/hello.html -->
+<html>
+  <head>
+    <title>Bienvenido al ejemplo OneClick</title>
+  </head>
+  <body>
+    <h1>Autorizar transacción</h1>
+
+    <a href="/inscription/create">Iniciar el proceso de inscripción</a>
+
+    <p>Token del usuario generado despues de la inscripción exitosa</p>
+    <p>
+      Usuario ingresado en el formulario de inicialización de la inscripción
+    </p>
+
+    <form action="http://localhost:8080/transaction/authorize" method="post">
+      <label for="user_token">Token del usuario</label>
+      <input type="text" name="user_token" id="user_token" />
+
+      <br />
+
+      <label for="username">Usuario</label>
+      <input type="text" name="username" id="username" />
+
+      <br />
+
+      <label for="amount">Monto</label>
+      <input type="number" name="amount" id="amount" />
+
+      <br />
+
+      <label for="order">Orden de compra</label>
+      <input type="text" name="order" id="order" />
+
+      <br />
+
+      <button type="submit">Autorizar pagos</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+version: "3.1"
+# App Service
+services:
+  app:
+    container_name: go-oneclick-mall
+    # Configuration for building the docker image for the service
+    build:
+      context: . # Use an image built from the specified dockerfile in the current directory.
+      dockerfile: Dockerfile
+    hostname: go-oneclick-mall
+    ports:
+      - "8080:8080" # Forward the exposed port 8080 on the container to port 8080 on the host machine

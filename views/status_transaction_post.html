@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Estado del cobro</title>
+  </head>
+  <body>
+    <h1>Datos de respuesta</h1>
+
+    <p> BuyOrder : {{.response.BuyOrder}}</p>
+    <p> Card Number : {{.response.CardDetail.CardNumber}}</p>
+    <p> AccountingDate : {{.response.AccountingDate}}</p>
+    <p> TransactionDate : {{.response.TransactionDate}}</p>
+
+    <p> Details </p>
+
+    {{range .response.Details }}
+
+        <p> Amount : {{ .Amount }}</p>
+        <p> Status : {{ .Status }}</p>
+        <p> AuthorizationCode : {{ .AuthorizationCode }}</p>
+        <p> PaymentTypeCode : {{ .PaymentTypeCode }}</p>
+        <p> ResponseCode : {{ .ResponseCode }}</p>
+        <p> InstallmentsNumber : {{ .InstallmentsNumber }}</p>
+        <p> CommerceCode : {{ .CommerceCode }}</p>
+        <p> BuyOrder : {{ .BuyOrder }}</p>
+
+    {{end}}
+
+    
+</html>
+

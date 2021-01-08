@@ -1,0 +1,18 @@
+<!-- file: ./views/hello.html -->
+<html>
+  <head>
+    <title>Bienvenido al ejemplo OneClick</title>
+  </head>
+  <body>
+    <h1>Consultar el estado de un pago</h1>
+
+    <form action="http://localhost:8080/transaction/status" method="post">
+      <label for="order">Orden de compra</label>
+      <input type="text" name="order" id="order" />
+
+      <br />
+
+      <button type="submit">Consultar</button>
+    </form>
+  </body>
+</html>
